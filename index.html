@@ -42,11 +42,22 @@
 
     <!-- NAVBAR -->
 <header class="navbar">
-    <div class="logo">
+
+    <!-- LOGO -->
+    <a href="index.html" class="logo">
         <img src="images/logoSRtransparent.png" alt="Social Reserve Logo">
+    </a>
+
+    <!-- HAMBURGER -->
+    <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
 
-    <nav>
+    <!-- NAV -->
+    <nav class="nav-menu" id="nav-menu">
+
         <ul>
             <li><a href="index.html" class="active-nav">Home</a></li>
             <li><a href="services.html">Services</a></li>
@@ -54,7 +65,9 @@
             <li><a href="contact.html">Booking</a></li>
             <li><a href="contact.html" class="cta-nav">Contact Us</a></li>
         </ul>
+
     </nav>
+
 </header>
 
 
@@ -69,7 +82,7 @@
 
     <!-- CONTENT -->
     <div class="hero-content">
-        <h1>Elevated Mobile Bar Experiences</h1>
+        <h1>The Social Reserve</h1>
         <p>Custom crafted beverage services designed to bring your event to life.</p>
 
         <div class="hero-buttons">
@@ -83,14 +96,24 @@
 
 <!-- VALUE -->
 <section class="value hidden">
+
+    <div class="value-bg-logo">
+        <img src="images/logoSRtransparent.png">
+    </div>
+
     <h2>More Than a Bar</h2>
+
     <p class="value-lead">
-        We design experiences, not just drink service. Every detail is thoughtfully curated, from signature menus to fully styled setups that complement your event.
+        We design experiences, not just drink service. Every detail is thoughtfully curated,
+        from signature menus to fully styled setups that complement your event.
     </p>
 
     <p class="value-sub">
-        Whether you’re planning a wedding, corporate event, or private celebration, our goal is to create a seamless atmosphere where everything feels intentional, elevated, and easy to enjoy.
+        Whether you’re planning a wedding, corporate event, or private celebration,
+        our goal is to create a seamless atmosphere where everything feels intentional,
+        elevated, and easy to enjoy.
     </p>
+
 </section>
 
 
@@ -208,6 +231,9 @@
 
 <!-- EXPERIENCE -->
 <section id="experience" class="experience hidden">
+        <div class="value-bg-logo">
+        <img src="images/logoSRtransparent.png">
+    </div>
     <h2>Designed Around You</h2>
     <p>
         Every event is built around your vision. From the first conversation to the final setup, we take the time to understand your style, preferences, and goals to create a cohesive experience that feels personal, elevated, and seamless.
@@ -293,20 +319,28 @@
 
 <!-- CTA -->
 <section id="contact" class="cta hidden">
-    <h2>Let’s Create Your Experience</h2>
-    <p>Tell us about your event and we’ll design something tailored just for you.</p>
 
-    <form>
-        <input type="text" placeholder="Full Name" required>
-        <input type="email" placeholder="Email" required>
-        <input type="tel" placeholder="Phone Number">
-        <input type="text" placeholder="Event Type">
-        <input type="date">
-        <input type="text" placeholder="Event Location">
-        <textarea placeholder="Tell us about your event"></textarea>
+    <div class="cta-content">
 
-        <button type="submit">Start Planning</button>
-    </form>
+        <span class="section-tag">START THE EXPERIENCE</span>
+
+        <h2>Request a Consultation</h2>
+
+        <p>
+            Tell us about your event and let’s create an experience tailored to your vision,
+            style, and atmosphere.
+        </p>
+
+        <div class="cta-buttons">
+
+            <a href="contact.html" class="btn-primary">
+                Start Planning
+            </a>
+
+        </div>
+
+    </div>
+
 </section>
 
 <section class="seo-section">
