@@ -1774,4 +1774,26 @@ section {
         padding: 16px 5%;
     }
 
+        .page-hero {
+        min-height: 55svh;
+
+        padding-top: 120px;
+        padding-bottom: 60px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        text-align: center;
+    }
+
+    .page-hero-content {
+        width: 100%;
+    }
+
+    .hero-content,
+    .page-hero-content {
+        padding-inline: 10px;
+    }
+
 }
