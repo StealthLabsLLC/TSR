@@ -22,3 +22,42 @@ menuToggle.addEventListener("click", () => {
     document.body.classList.toggle("menu-open");
 
 });
+
+const navLinks = document.querySelectorAll(".nav-menu a");
+
+navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+
+        navMenu.classList.remove("active");
+        menuToggle.classList.remove("active");
+        document.body.classList.remove("menu-open");
+
+    });
+});
+
+const contactToggle = document.getElementById("contact-toggle");
+const contactDropdown = document.getElementById("contact-dropdown");
+
+if (contactToggle) {
+
+    contactToggle.addEventListener("click", (e) => {
+
+        e.preventDefault();
+
+        contactDropdown.classList.toggle("active");
+
+    });
+
+}
+
+/* CLICK OUTSIDE TO CLOSE */
+document.addEventListener("click", (e) => {
+
+    if (
+        !contactDropdown.contains(e.target) &&
+        !contactToggle.contains(e.target)
+    ) {
+        contactDropdown.classList.remove("active");
+    }
+
+});

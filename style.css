@@ -1424,6 +1424,117 @@ section {
     line-height: 1.7;
 }
 
+/* ========================= */
+/* CONTACT DROPDOWN */
+/* ========================= */
+
+.contact-dropdown {
+
+    position: fixed;
+
+    top: 90px;
+    left: 50%;
+
+    transform: translateX(-50%) translateY(-20px);
+
+    width: 90%;
+    max-width: 650px;
+
+    background: rgba(10,10,10,0.96);
+
+    border: 1px solid rgba(200,169,106,0.12);
+
+    border-radius: 24px;
+
+    backdrop-filter: blur(20px);
+
+    padding: 40px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.35s ease;
+
+    z-index: 9999;
+}
+
+/* OPEN */
+.contact-dropdown.active {
+
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateX(-50%) translateY(0);
+}
+
+/* CONTENT */
+.contact-dropdown-content {
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    text-align: center;
+
+    gap: 22px;
+}
+
+/* TITLE */
+.contact-dropdown h3 {
+    font-size: 2rem;
+}
+
+/* TEXT */
+.contact-dropdown p {
+    opacity: 0.8;
+    line-height: 1.8;
+}
+
+/* CONTACT LINKS */
+.dropdown-contact-items {
+
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 20px;
+}
+
+.dropdown-contact-items a {
+
+    color: #c8a96a;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.dropdown-contact-items a:hover {
+    opacity: 0.7;
+}
+
+/* BUTTON */
+.dropdown-buttons {
+    margin-top: 10px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+    .contact-dropdown {
+
+        padding: 30px 24px;
+
+        top: 80px;
+    }
+
+    .contact-dropdown h3 {
+        font-size: 1.7rem;
+    }
+
+}
+
 /* shimmer animation */
 @keyframes goldShimmer {
 
@@ -1486,6 +1597,20 @@ section {
 
     img {
     object-position: center;
+    }
+
+        .contact-dropdown {
+        top: 80px;
+
+        padding: 25px;
+
+        max-height: 85vh;
+
+        overflow-y: auto;
+    }
+
+    .contact-dropdown-content {
+        grid-template-columns: 1fr;
     }
 
     /* HERO */
@@ -1561,6 +1686,11 @@ section {
 /* ========================= */
 
 @media (max-width: 600px) {
+    html,
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
 
     h1 {
         font-size: 2.1rem;
@@ -1573,12 +1703,12 @@ section {
 
     p {
         font-size: 0.95rem;
+        line-height: 1.7;
     }
 
     /* HERO */
     .hero {
-        height: auto;
-        min-height: 100vh;
+        min-height: 100svh;
     }
 
     .hero-content {
@@ -1603,6 +1733,10 @@ section {
         height: 240px;
     }
 
+    .nav-menu a {
+    padding: 10px 0;
+    }
+
     /* IMAGES */
     .founder-card img,
     .signature-row img,
@@ -1615,9 +1749,29 @@ section {
         width: 280px;
     }
 
+        .contact-dropdown {
+
+        padding: 30px 24px;
+
+        top: 80px;
+    }
+
+    .contact-dropdown h3 {
+        font-size: 1.7rem;
+    }
+
+    .signature-row img,
+    .service-row img {
+        min-height: 220px;
+    }
+
     /* CTA */
     .cta-buttons {
         flex-direction: column;
+    }
+
+        .navbar {
+        padding: 16px 5%;
     }
 
 }
